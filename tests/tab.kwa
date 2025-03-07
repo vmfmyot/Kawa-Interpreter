@@ -1,0 +1,47 @@
+int[] p, q, r;
+
+main{
+    //2 façons d'initialiser un tableau : new type[] ou directement [val, val, val, ..., val]
+
+    p = new int[];
+    p[0] = 0; p[1] = 1;
+    print(p[0]);                            //affiche 0
+    
+    print("Tableau Q :");
+    q = [30, 9, 0];
+    for(int a : q){ print(a); }
+    print("Longueur du tableau q : (affiche 3)");
+    print(q.length);                        //affiche 3
+    print("On modifie q[1] -> q[1] = 88 : ");
+    q[1] = 88;
+    print(q[1]);                            //affiche 88
+
+    print("On ajoute une nouvelle valeur à q : ");
+    q[3] = 125;
+    for(int a : q){ print(a);}
+
+    print("On supprime la valeur à q[0] -> tout ce qu'il y a après est décalé");
+    q.rem(0);                               //si on supprime un indice, ça décale le reste
+    for(int a : q){ print(a); }
+    print("On affiche q[2] : normalement, ça affiche la valeur qui était précédemment à q[3] -> les indices sont bien mis à jour");
+    print(q[2]);                            //affiche 125, la valeur qui était précédemment à l'indice 3
+
+    print("Test de tl : on enlève le dernier élément et on le renvoit");
+    print(q.tl);                            //affiche 125
+    print("Nouvelle taille :");
+    print(q.length);                        //affiche 2
+    print("Nouvelle liste :");
+    for(int a : q){ print(a); }
+
+    print("Fonction hd : renvoit le 1er élément d'un tableau : ");
+    print(q.hd);
+
+    print("Copy d'un tableau :");
+    r = q.copy;
+    for(int a : q){ print(a); }
+
+    print("Tests tab.mem(x) -> renvoit true si x est dans tab :");
+    if( q.mem(0) ) { print("0 dans q : test mem ok !"); } else { print("0 non détecté dans q : test mem pas ok"); }
+    if( q.mem(88) ) { print("88 dans q : test mem ok !"); } else { print("88 non détecté dans q : test mem pas ok"); }
+    if( q.mem(125) ) { print("125 trouvé dans q : test mem pas ok"); } else { print("125 pas dans q : test mem ok!"); }
+}

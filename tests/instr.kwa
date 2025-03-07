@@ -1,0 +1,16 @@
+int a;
+int n;
+int acc;
+int b;
+
+main {
+  a = 2;
+  n = 9;
+  acc = 1;
+  while (n != 0) {
+    if (n%2 != 0) { acc = a*acc; } else {print(2);}
+    a = a*a;
+    n = n/2;
+  }
+  print(acc);
+}

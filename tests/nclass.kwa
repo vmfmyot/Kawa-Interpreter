@@ -1,0 +1,26 @@
+segment s;
+point p;
+
+class point {
+  int x;
+  int y;
+}
+
+class segment {
+  point a;
+  point b;
+}
+
+main {
+  p = new point;
+  p.x = 1;
+  p.y = 2;
+  s = new segment;
+  s.a = p;
+  s.b = new point;
+  s.b.x = 3;
+  p = s.b;
+  p.y = 4;
+  print(s.a.x + s.a.y + s.b.x + s.b.y);
+  // affiche 10
+}

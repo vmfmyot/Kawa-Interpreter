@@ -1,0 +1,72 @@
+paire p, pt, qp, pp, ppp;
+triple t;
+quatre qu;
+int i;
+
+class paire {
+  int x, y;
+
+  void constructor(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  int somme() {
+    return this.x + this.y;
+  }
+}
+
+class triple extends paire {
+  int z;
+
+  void constructor(int x, int y, int z) {
+    super.constructor(x, y);
+    this.z = z;
+  }
+
+  int somme() {
+    return super.somme() + this.z;
+  }
+
+  int produit() {
+    return this.x * this.y * this.z;
+  }
+}
+
+class quatre extends triple {
+  int q;
+
+  void constructor(int x, int y, int z, int q) {
+    super.constructor(x, y, z);
+    this.q = q;
+  }
+
+  int somme() {
+    return super.somme() + this.q;
+  }
+
+  int division(){
+    if(this.x % this.z != 0){
+      return this.x/this.z + 1;
+    }
+    else {
+      return this.x/this.z;
+    }
+  }
+
+}
+
+main {
+  
+  p = new paire(1, 2);
+  t = new triple(3, 4, 5);
+  qu = new quatre(4, 5, 6, 8);
+  print(p.somme());
+  print(t.somme());
+  print(t.produit());
+  print(qu.division());
+  pt = new triple(1, 2,3);
+  qp = new quatre(1, 2, 3, 4);
+  print(pt.somme());
+
+}

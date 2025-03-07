@@ -1,0 +1,60 @@
+paire p;
+triple t;
+
+class paire {
+  int x;
+  int y;
+
+  void constructor(int a, int b) {
+    this.x = a;
+    this.y = b;
+  }
+
+  int somme() {
+    return this.x + this.y;
+  }
+
+  int somme(int a){
+    return this.x + this.y + a;
+  }
+}
+
+
+class triple extends paire {
+  int z;
+
+  void constructor(int x, int y, int z) {
+    super.constructor(x, y);
+    this.z = z;
+  }
+
+  int somme() {
+    return super.somme() + this.z;
+  }
+
+  int produit() {
+    return this.x * this.y * this.z;
+  }
+}
+
+
+main{
+    p = new paire(1, 2);
+
+    //Test Surcharge
+    print(p.somme());         //affiche 3
+    if( p.somme(3) == 6 ) { print("Test surcharge ok !"); } else { print("Test surcharge pas ok ");}
+
+    //Test Instanceof
+    if( p instanceof paire ){ print("Test instanceof : p is a paire -> ok");} else { print("Test instanceof : p isn't a paire ?? -> pas ok");}
+
+    
+    //Test Transtypage
+    t = new triple(3, 4, 5);
+    
+    print("Test transtypage : (paire)triple");
+    print(t.somme());           //affiche 3+4+5=12
+    
+    if( (paire)t.somme() == 7 ){ print("transtypage : (paire)t.somme() == 7 -> ok"); } else { print("transtypage : (paire)t.somme() != 7 -> PAS ok"); }
+
+}
