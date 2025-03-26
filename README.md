@@ -17,7 +17,7 @@ Kawa is a small object-oriented language inspired by Java. However, we adapted s
 Kawa files have the `.kwa` extension. You can find some examples in the tests folder.\
 \
 To compile and execute a file, use the following command line :\
-`smth TO DO`\
+`./kawai.exe <name_of_file>`\
 **Variables** need to be declared at the beginning of a file. They can either be declared one by one, or one after the other if they are of the same type. **Classes** are declared below variables. The **main code** is executed in a `main { }` function (without the () !)\
 Comments can be detected with `//`.
 \
