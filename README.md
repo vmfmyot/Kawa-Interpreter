@@ -22,7 +22,7 @@ To compile and execute a file, use the following command line :\
 Comments can be detected with `//`.
 \
 You will find down below the different features available.
-
+ 
 
 
 ### _Basic types_
