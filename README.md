@@ -5,11 +5,11 @@ This project provides an OCaml interpreter for 'Kawa', a small object-oriented l
 Developed in 4 weeks for a 3rd-year university compilation course, it covers both syntax and semantics.
 ## Authors
 
-This project was made by [Isabel Fabrega](https://github.com/im-f) and [Victoria Myot](https://github.com/vmfmyot), computer science students at Université Paris-Saclay.
+This interpreter was made by [Isabel Fabrega](https://github.com/im-f) and [Victoria Myot](https://github.com/vmfmyot), computer science students at Université Paris-Saclay.
 
 ## Prerequisites
 
-As this project is written in OCaml, we recommend you have opam installed on your machine. Here's the [link](https://opam.ocaml.org/) to the installation page.
+As it is written in OCaml, we recommend you have opam installed on your machine. Here's the [link](https://opam.ocaml.org/) to the installation page.
 
 ## Documentation
 
@@ -38,6 +38,10 @@ The usual binary operators are implemented :
 - Computational operators: `= + - / %`
 - Comparison operators: `< <= > >= == !=`
 - Boolean operators: `&& ||`
+
+
+
+
 We also added structural equality, which check if 2 objects are structurally equal. The binary operators for this are `===` and `=/=`.\
 Structural equality is tested in the `eqstruct.kwa` file.
 
@@ -64,7 +68,7 @@ This interpreter supports if, while and for loops.
 **while** and **if** loops are tested in the `instr.kwa` file, and **for** loops in `loops.kwa`.\
 \
 There are also **foreach loops**, currently only usable on arrays as they're the only iterable structure :\
-`for( array_type value : name ){ instructions }`\
+`for( array_type value : array_name ){ instructions }`\
 **foreach** loops are tested in `tab.kwa`.
 
 
@@ -82,10 +86,10 @@ Simple arrays are supported, with the [ ] token.\
 arr1 = new type[]
 arr2 = [element1, element2, element3]
 ```
-Arrays also have the following methods :
+Arrays also support the following methods :
 - `.length` : returns the length of an array
 - `.hd` : returns the 1st element of an array
-- `.tl` : returns the last element and removes it out of the array
+- `.tl` : returns the last element and removes it from the array
 - `.rem(index)` : removes the element of the given index
 - `.mem(value)` : returns true if the value is in the array, else returns false
 - `.copy` : returns a copy of the array
