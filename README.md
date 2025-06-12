@@ -42,7 +42,7 @@ The usual binary operators are implemented :
 
 
 
-We also added structural equality, which check if 2 objects are structurally equal. The binary operators for this are `===` and `=/=`.\
+We also added structural equality, which checks if 2 objects are structurally equal. The binary operators for this are `===` and `=/=`.\
 Structural equality is tested in the `eqstruct.kwa` file.
 
 
@@ -83,8 +83,8 @@ Simple arrays are supported, with the [ ] token.\
 \
 **Initialization :** there are 2 possible ways of initializing an array :
 ```
-arr1 = new type[]
-arr2 = [element1, element2, element3]
+arr1 = new type[];
+arr2 = [element1, element2, element3];
 ```
 Arrays also support the following methods :
 - `.length` : returns the length of an array
